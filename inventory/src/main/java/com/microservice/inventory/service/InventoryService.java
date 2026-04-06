@@ -33,7 +33,7 @@ public class InventoryService {
     }
 
     public InventoryDTO getItemById(int itemId) {
-        Inventory inventory = inventoryRepo.findById(itemId).get();
+        Inventory inventory = inventoryRepo.getItemById(itemId);
         return modelMapper.map(inventory, InventoryDTO.class);
     }
 

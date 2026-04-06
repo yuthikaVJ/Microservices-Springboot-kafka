@@ -32,7 +32,7 @@ public class ProductService {
     }
 
     public ProductDTO getProductById(int productId) {
-        Product product = productRepo.findById(productId).get();
+        Product product = productRepo.getProductById(productId);
         return modelMapper.map(product, ProductDTO.class);
     }
 
